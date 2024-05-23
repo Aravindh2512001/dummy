@@ -1,0 +1,74 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #333;
+  color: #fff;
+}
+
+.logo {
+  font-size: 1.5rem;
+}
+.btns-nav {
+  border-radius: 50%;
+  padding: 8px 7px 3px;
+  background: none;
+  color: #fff;
+  margin-right: 1rem;
+  cursor: pointer;
+  position: relative; /* This is important for positioning the ripple element */
+  overflow: hidden; /* This prevents the ripple from overflowing the button */
+}
+.btns-nav span {
+  position: absolute;
+  z-index: 99;
+  top: 1px;
+  right: 6px;
+  background: #007bff;
+  border-radius: 50%;
+  padding: 0px 4px;
+  font-size: 11px;
+}
+.btns-nav::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #1e88e5; /* Change this to your desired blue color */
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+}
+
+.btns-nav:active::after {
+  opacity: 1;
+  transform: scale(2);
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  font-size: 1.2rem;
+  /* margin-right: 1rem; */
+}
+
+.profile-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.logout-button {
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  background: #007bff;
+  padding: 6px 17px;
+  border-radius: 8px;
+}
